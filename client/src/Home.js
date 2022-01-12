@@ -12,16 +12,23 @@ export const Home = () => {
     <MDBContainer>
       <h1
         style={{
-          fontSize: "4rem",
+          fontSize: "2rem",
           fontWeight: "800",
-          justifyContent: "center",
+          justifyContent: "left",
           marginTop: "3rem",
           marginBottom: "2rem",
           
         }}
       >
-        3 places to visit in New York City
+        Tartu kaasaegseim biokliinik.
       </h1>
+      <h6 style={{
+        fontSize: "16px",
+        fontWeight: "400",
+        justifyContent: "centlefter",
+        marginTop: "1rem",
+        marginBottom: "2rem",
+      }}>Meil töötavad kogenud arstid ja spetsialistid</h6>
       <MDBRow>
       <MDBCol sm="6"> <Dropwishes /> </MDBCol> {/** Dropwishes component */}
       <MDBCol sm="6"> <Dropsypmtom /> </MDBCol> {/** Dropkaebused component */}
