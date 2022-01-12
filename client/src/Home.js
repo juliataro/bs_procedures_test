@@ -1,13 +1,15 @@
-import aaronsebastian from "./aaronsebastian.jpg";
-import Slider from "./Components/Slider";
-import { Container, Row, Col, Card } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import Dropwishes from "./Components/Dropwishes";
+import Dropsypmtom from "./Components/Dropsypmtom";
+import Dropcontraindications from "./Components/Dropcontraindications";
+import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import './index.css';
+
+
 import "./App.css";
 
-export const Home = () => (
-  <>
-    <Slider /> {/** Slider component */}
-    <Container>
+export const Home = () => {
+  return (
+    <MDBContainer>
       <h1
         style={{
           fontSize: "4rem",
@@ -20,47 +22,15 @@ export const Home = () => (
       >
         3 places to visit in New York City
       </h1>
-      <Row className="justify-content-md-center">
-        {/* First Card */}
-        <Col sm style={{ marginRight: "1rem" }}>
-          <Card style={{ border: "none", marginBottom: "3rem" }}>
-            <Card.Img
-              variant="top"
-              src={aaronsebastian}
-              style={{ borderTopRightRadius: "15px", marginBottom: "1rem" }}
-            />
-            <Card.Title>New York blog</Card.Title>
-            <Card.Text>Here is</Card.Text>
-            <Button variant="primary">Learn more</Button>
-          </Card>
-        </Col>
-        {/* Second Card */}
-        <Col sm>
-          <Card style={{ border: "none" }}>
-            <Card.Img
-              variant="top"
-              src={aaronsebastian}
-              style={{ borderTopRightRadius: "15px", marginBottom: "1rem" }}
-            />
-            <Card.Title>New York blog</Card.Title>
-            <Card.Text>Here is</Card.Text>
-            <Button variant="primary">Learn more</Button>
-          </Card>
-        </Col>
-        {/* Third Card */}
-        <Col sm style={{ marginLeft: "1rem" }}>
-          <Card style={{ border: "none" }}>
-            <Card.Img
-              variant="top"
-              src={aaronsebastian}
-              style={{ borderTopRightRadius: "15px", marginBottom: "1rem" }}
-            />
-            <Card.Title>New York blog</Card.Title>
-            <Card.Text>Here is</Card.Text>
-            <Button variant="primary">Learn more</Button>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-  </>
-);
+      <MDBRow>
+      <MDBCol sm="6"> <Dropwishes /> </MDBCol> {/** Dropwishes component */}
+      <MDBCol sm="6"> <Dropsypmtom /> </MDBCol> {/** Dropkaebused component */}
+      </MDBRow>
+      <MDBRow>
+      <MDBCol sm="6"> <Dropcontraindications /> {/** Slider component */}</MDBCol>
+      <MDBCol sm="6">One of three columns</MDBCol>
+      </MDBRow>
+    </MDBContainer>
+  );
+}
+

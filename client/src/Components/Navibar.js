@@ -7,6 +7,8 @@ import { Button } from "react-bootstrap";
 
 import styled from "styled-components";
 import { Modal } from "react-bootstrap";
+import Logo from '../Images/Loodus-BioSpa-Logo-300.png';  //  src/images
+
 
 const Styles = styled.div`
   a,
@@ -22,30 +24,31 @@ const Styles = styled.div`
 
 // ne zabivat propisivat  "export default"
 export default function NaviBar() {
-  // funksii kotorie budut otkrivat modalnoe okno
-  const [show, setShow] = useState(false); // metod i funksija setShow
 
+  // Funktions that will open modal window of login
+  const [show, setShow] = useState(false); // method and funktion of setShow
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  // ne zabivat stavit "return"
+  
   return (
     <>
       <Styles>
-        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect expand="lg" bgcolor="white" variant="dark">
           <Container>
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Brand >
+          <Link to="/home">
+          <img width="70px" height="auto" className="img-responsive" src={Logo}  alt="logo" />
+          </Link>
+        </Navbar.Brand>            
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link>
-                  <Link to="/">Home</Link>
+                  <Link to="/">Protseduurite eelvalik</Link>
                 </Nav.Link>
                 <Nav.Link>
-                  <Link to="/users">Users</Link>
-                </Nav.Link>
-                <Nav.Link>
-                  <Link to="/about">Parallax</Link>
+                  <Link to="/about">Meist</Link>
                 </Nav.Link>
               </Nav>
               <Nav>
