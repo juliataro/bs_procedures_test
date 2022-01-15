@@ -37,7 +37,7 @@ export const Home = () => {
     </Row>
     <Row>
       <Col > <Dropcontraindications />  </Col>
-      <Col > midamimidagi </Col> 
+      <Col > sssssssss </Col> 
     </Row>
   </Container>
   );
