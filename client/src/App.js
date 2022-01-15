@@ -1,8 +1,9 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 
 import NaviBar from "./Components/Navibar";
 import Footer from "./Components/Footer";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 

@@ -1,33 +1,109 @@
 import React from "react";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
-import '../index.css';
+import DropdownButton from "react-bootstrap/DropdownButton";
+import { Container, Row, Col, Form } from "react-bootstrap";
 
+import "../index.css";
+import "../custom.scss";
 
 const gridExamplesPage = () => {
-    return (
-        <MDBContainer>
-          <MDBRow >
-              {/** Wishes Dropdown Button */}
-            <MDBCol style={{ paddingLeft: 0, paddingRight: "10px" }}>
-            <div class="btn-group">
-  <button type="button" class="btn dropcolor">Soovitused / Eesmärgid</button>
-  <button
-    type="button"
-    class="btn droptoggle dropdown-toggle dropdown-toggle-split"
-    data-mdb-toggle="dropdown"
-    aria-expanded="false"
-  >
-    <span class="visually-hidden"></span>
-  </button>
-  <ul class="dropdown-menu">
- 
-  </ul>
-</div>
-            </MDBCol>
-          </MDBRow>
-        </MDBContainer>
-    );
-  }
-  
-  export default gridExamplesPage;
-  
+  return (
+    <DropdownButton id="dropdown-item-button" title="Dropdown button" size="sm" className="d-flex justify-content-between;">
+      <Form>
+        {["checkbox"].map((type) => (
+          <Container className="mb-3">
+            <Row>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="sööma"
+                  name="group1"
+                  type={type}
+                  variant="primary"
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="sööma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="sööma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="sööma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="jooma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="magama"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+            </Row>
+            <Row>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="sööma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="jooma"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+              <Col sm={4}>
+                {" "}
+                <Form.Check
+                  inline
+                  label="magama"
+                  name="group1"
+                  type={type}
+                />{" "}
+              </Col>
+            </Row>
+          </Container>
+        ))}
+      </Form>
+    </DropdownButton>
+  );
+};
+
+export default gridExamplesPage;

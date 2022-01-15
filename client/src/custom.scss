@@ -1,0 +1,8 @@
+$theme-colors: (
+    "primary": #72bb94,
+    "secondary": #1e1e1e,
+    "success": #c9c9c9
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap.scss";

@@ -24,13 +24,39 @@ h5 {
 }
 
 
+/*  -----------  branding colors #72bb94 ------------  */
+
+/* ------------ Dropdowns width---------- */
+.dropdown-toggle,
+.dropdown-menu {
+  width: 100%;
+}
+
+.dropdown-toggle::after{
+  float:right ;
+
+}
+
+.btn{
+  text-align: left !important;
+  padding-left: 1em !important;
+}
+
+/* ------------ Bootsrap button shadow on click---------- */
+.btn{
+	box-shadow: none !important
+}
+
+.dropdown-item-button{
+
+}
 
 /* ------------ Dropdowns ---------- */
 .dropcolor{
   background-color:#ffffff !important;
   border-color:#c9c9c9 1px solid !important;
   width: 500px;
-  color: #0D0D0D !important;
+  color: #1e1e1e !important;
   text-align: left !important;
 }
 .droptoggle{

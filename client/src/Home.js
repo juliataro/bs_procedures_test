@@ -1,15 +1,17 @@
 import Dropwishes from "./Components/Dropwishes";
 import Dropsypmtom from "./Components/Dropsypmtom";
 import Dropcontraindications from "./Components/Dropcontraindications";
-import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { Container, Row, Col } from "react-bootstrap";
+
 import './index.css';
 
 
-import "./App.css";
+import "./App.scss";
 
 export const Home = () => {
   return (
-    <MDBContainer>
+    
+    <Container fluid="md">
       <h1
         style={{
           fontSize: "2rem",
@@ -29,15 +31,15 @@ export const Home = () => {
         marginTop: "1rem",
         marginBottom: "2rem",
       }}>Meil töötavad kogenud arstid ja spetsialistid</h6>
-      <MDBRow>
-      <MDBCol sm="6"> <Dropwishes /> </MDBCol> {/** Dropwishes component */}
-      <MDBCol sm="6"> <Dropsypmtom /> </MDBCol> {/** Dropkaebused component */}
-      </MDBRow>
-      <MDBRow>
-      <MDBCol sm="6"> <Dropcontraindications /> {/** Slider component */}</MDBCol>
-      <MDBCol sm="6">One of three columns</MDBCol>
-      </MDBRow>
-    </MDBContainer>
+    <Row className="justify-content-md-center">
+      <Col > <Dropwishes /> </Col>
+      <Col > <Dropsypmtom /> </Col>
+    </Row>
+    <Row>
+      <Col > <Dropcontraindications />  </Col>
+      <Col > midamimidagi </Col> 
+    </Row>
+  </Container>
   );
 }
 
