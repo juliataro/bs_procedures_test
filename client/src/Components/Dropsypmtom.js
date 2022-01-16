@@ -7,7 +7,7 @@ import "../custom.scss";
 
 const gridExamplesPage = () => {
   return (
-    <DropdownButton as={Col} id="dropdown-item-button" title="Dropdown button" size="sm" className="mb-4">
+    <DropdownButton as={Col} id="dropdown-item-button" title="Kaebused" size="sm" className="mb-4">
       <Form>
         {["checkbox"].map((type) => (
           <Container className="mb-3">

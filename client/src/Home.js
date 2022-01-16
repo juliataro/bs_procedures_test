@@ -1,7 +1,8 @@
 import Dropwishes from "./Components/Dropwishes";
 import Dropsypmtom from "./Components/Dropsypmtom";
 import Dropcontraindications from "./Components/Dropcontraindications";
-import Rslider from "./Components/Rslider";
+import MultiRangeSlider from "./Components/MultiRangeSlider";
+import "./Components/MultiRangeSlider.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -39,7 +40,11 @@ export const Home = () => {
     </Row>
     <Row>
       <Col > <Dropcontraindications />  </Col>
-      <Col > <Rslider /> </Col>  
+      <Col > <MultiRangeSlider
+              min={0}
+              max={1000}
+              onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+            /></Col>  
     </Row>
   </Container>
   );
