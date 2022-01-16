@@ -1,6 +1,8 @@
 import Dropwishes from "./Components/Dropwishes";
 import Dropsypmtom from "./Components/Dropsypmtom";
 import Dropcontraindications from "./Components/Dropcontraindications";
+import Rslider from "./Components/Rslider";
+
 import { Container, Row, Col } from "react-bootstrap";
 
 import './index.css';
@@ -37,7 +39,7 @@ export const Home = () => {
     </Row>
     <Row>
       <Col > <Dropcontraindications />  </Col>
-      <Col > sssssssss </Col> 
+      <Col > <Rslider /> </Col>  
     </Row>
   </Container>
   );
