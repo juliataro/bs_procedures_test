@@ -7,8 +7,7 @@ import { Button } from "react-bootstrap";
 
 import styled from "styled-components";
 import { Modal } from "react-bootstrap";
-import Logo from '../Images/Loodus-BioSpa-Logo-300.png';  //  src/images
-
+import Logo from "../Images/Loodus-BioSpa-Logo-300.png"; //  src/images
 
 const Styles = styled.div`
   a,
@@ -24,32 +23,36 @@ const Styles = styled.div`
 
 // ne zabivat propisivat  "export default"
 export default function NaviBar() {
-
   // Funktions that will open modal window of login
   const [show, setShow] = useState(false); // method and funktion of setShow
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  
   return (
     <>
       <Styles>
         <Navbar collapseOnSelect expand="lg" bgcolor="white" variant="dark">
           <Container>
-          <Navbar.Brand >
-          <Link to="/home">
-          <img width="70px" height="auto" className="img-responsive" src={Logo}  alt="logo" />
-          </Link>
-        </Navbar.Brand>            
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Brand>
+              <Link to="/home">
+                <img
+                  width="70px"
+                  height="auto"
+                  className="img-responsive"
+                  src={Logo}
+                  alt="logo"
+                />
+              </Link>
+            </Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
                 <Nav.Link>
                   <Link to="/">Protseduurite eelvalik</Link>
                 </Nav.Link>
-                <Nav.Link>
+                {/* <Nav.Link>
                   <Link to="/about">Meist</Link>
-                </Nav.Link>
+                </Nav.Link> */}
               </Nav>
               <Nav>
                 {/* metod otslezivanija sobitiy onClick */}
