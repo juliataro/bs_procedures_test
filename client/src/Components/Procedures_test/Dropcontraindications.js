@@ -2,12 +2,17 @@ import React from "react";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { Container, Row, Col, Form } from "react-bootstrap";
 
-import "../index.css";
-import "../custom.scss";
+import "../../index.css";
+import "../../custom.scss";
 
 const gridExamplesPage = () => {
   return (
-    <DropdownButton id="dropdown-item-button" title="Soovitused / Eesmärgid" size="sm" className="d-flex justify-content-between;">
+    <DropdownButton
+      id="dropdown-item-button"
+      title="Haigused / Piirangud"
+      size="sm"
+      className="mb-4"
+    >
       <Form>
         {["checkbox"].map((type) => (
           <Container className="mb-3">
@@ -19,14 +24,13 @@ const gridExamplesPage = () => {
                   label="sööma"
                   name="group1"
                   type={type}
-                  variant="primary"
                 />{" "}
               </Col>
               <Col sm={4}>
                 {" "}
                 <Form.Check
                   inline
-                  label="sööma"
+                  label="jooma"
                   name="group1"
                   type={type}
                 />{" "}
@@ -35,7 +39,7 @@ const gridExamplesPage = () => {
                 {" "}
                 <Form.Check
                   inline
-                  label="sööma"
+                  label="magama"
                   name="group1"
                   type={type}
                 />{" "}

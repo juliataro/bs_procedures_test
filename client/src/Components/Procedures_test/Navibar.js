@@ -7,7 +7,7 @@ import { Button } from "react-bootstrap";
 
 import styled from "styled-components";
 import { Modal } from "react-bootstrap";
-import Logo from "../Images/Loodus-BioSpa-Logo-300.png"; //  src/images
+import Logo from "../../Images/Loodus-BioSpa-Logo-300.png"; //  src/images
 
 const Styles = styled.div`
   a,

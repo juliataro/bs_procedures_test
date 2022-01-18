@@ -1,8 +1,8 @@
-import Dropwishes from "./Components/Dropwishes";
-import Dropsypmtom from "./Components/Dropsypmtom";
-import Dropcontraindications from "./Components/Dropcontraindications";
-import MultiRangeSlider from "./Components/MultiRangeSlider";
-import "./Components/MultiRangeSlider.css";
+import Dropwishes from "./Components/Procedures_view/Dropwishes";
+import Dropsypmtom from "./Components/Procedures_view/Dropsypmtom";
+import Dropcontraindications from "./Components/Procedures_view/Dropcontraindications";
+import MultiRangeSlider from "./Components/Procedures_view/MultiRangeSlider";
+import "./Components/Procedures_view/MultiRangeSlider.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 

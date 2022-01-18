@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.scss";
 
-import NaviBar from "./Components/Navibar";
-import Footer from "./Components/Footer";
-import "bootstrap/dist/css/bootstrap.min.css";
+import NaviBar from "./Components/Procedures_test/Navibar";
+import Footer from "./Components/Procedures_test/Footer";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
