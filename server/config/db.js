@@ -1,4 +1,3 @@
-require("dotenv").config();
 const mysql = require("mysql2");
 
 const pool = mysql.createConnection({
@@ -8,7 +7,7 @@ const pool = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-let sql = "SELECT * FROM Procedures;";
+let sql = "SELECT * FROM procedures;";
 
 pool.execute(sql, function (err, result) {
   if (err) throw err;

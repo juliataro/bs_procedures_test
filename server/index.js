@@ -1,3 +1,5 @@
+require("dotenv").config(); // allows environment variables to be set on process.env should be at top
+
 const express = require("express");
 const app = express();
 
@@ -11,11 +13,11 @@ app.use(cors());
 app.use(express.json());
 
 // Redirect requests to endpoint starting with /procedures to getProsedures.js
-// app.use("/procedures", require("./routes/getProcedures"));
+app.use("/procedures", require("./routes/procedures"));
 
-app.get("/", function (req, res) {
-  res.send("Hei there!");
-});
+// app.get("/", function (req, res) {
+//   res.send("Hei there!");
+// });
 
 // Listening for port cheking if serfer running, in terminal command: run indexjs
 app.listen(process.env.PORT, function () {
