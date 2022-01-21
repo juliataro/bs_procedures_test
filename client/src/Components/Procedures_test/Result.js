@@ -17,7 +17,10 @@ export const Result = () => {
       {procedureList.map((val, key) => {
         return (
           <Row>
+            {/* ------------  Fetching out of procedures after "Otsi button " click  -----------------  */}
             <Col>1 of 1</Col>
+
+            {/* ------------  Here to create imail input and button -----------------  */}
           </Row>
         );
       })}

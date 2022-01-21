@@ -5,7 +5,7 @@ import { Container, Row, Col, Form } from "react-bootstrap";
 import "../../index.css";
 import "../../custom.scss";
 
-const gridExamplesPage = () => {
+const dropWishes = () => {
   return (
     <DropdownButton
       id="dropdown-item-button"
@@ -53,4 +53,4 @@ const gridExamplesPage = () => {
   );
 };
 
-export default gridExamplesPage;
+export default dropWishes;

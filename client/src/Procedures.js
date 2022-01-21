@@ -1,8 +1,8 @@
-import Dropwishes from "./Components/Procedures_view/Dropwishes";
-import Dropsypmtom from "./Components/Procedures_view/Dropsypmtom";
-import Dropcontraindications from "./Components/Procedures_view/Dropcontraindications";
-import MultiRangeSlider from "./Components/Procedures_view/MultiRangeSlider";
-import "./Components/Procedures_view/MultiRangeSlider.css";
+import Dropwishes from "./Components/Procedures_test/Dropwishes";
+import Dropsypmtom from "./Components/Procedures_test/Dropsypmtom";
+import Dropcontraindications from "./Components/Procedures_test/Dropcontraindications";
+import MultiRangeSlider from "./Components/Procedures_test/MultiRangeSlider";
+import "./Components/Procedures_test/MultiRangeSlider.css";
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -32,7 +32,8 @@ export const Procedures = () => {
           marginBottom: "2rem",
         }}
       >
-        Meil töötavad kogenud arstid ja spetsialistid
+        Tekst sellisest testist ja selgitus et saab saada kõik või ainult osa
+        tulemusest oma mailile.
       </h6>
       <Row className="justify-content-md-center">
         <Col>

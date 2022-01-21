@@ -55,6 +55,9 @@ export default function NaviBar() {
                 </Nav.Link> */}
               </Nav>
               <Nav>
+                <Nav.Link href="#deets">Et</Nav.Link>
+                <Nav.Link href="#deets">Ru</Nav.Link>
+                <Nav.Link href="#deets">En</Nav.Link>
                 {/* metod otslezivanija sobitiy onClick */}
                 <Button variant="primary" className="m-2" onClick={handleShow}>
                   Log In
