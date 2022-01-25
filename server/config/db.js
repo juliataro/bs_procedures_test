@@ -7,11 +7,11 @@ const pool = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-let sql = "SELECT * FROM procedures;";
+// let sql = "SELECT * FROM symptoms;";
 
-pool.execute(sql, function (err, result) {
-  if (err) throw err;
-  console.log(result);
-});
+// pool.execute(sql, function (err, result) {
+//   if (err) throw err;
+//   console.log(result);
+// });
 
 module.exports = pool.promise();
