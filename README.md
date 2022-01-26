@@ -7,7 +7,7 @@ To start Server
 1. create .env 
 2. copy this .env sample
 
-# Node App environment variables
+
 NODE_ENV=development
 PORT=
 
@@ -23,7 +23,7 @@ DB_PASS=
 5. npm run dev
 
 
-To start Client 
+# To start Client 
 1. install yarn https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable
 2. yarn start
 
