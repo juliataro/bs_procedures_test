@@ -2,7 +2,7 @@
 
 This is the frontend-backend project with Express.js React.js and MySQL
 
-To start Server
+# To start Server
 
 1. create .env 
 2. copy .env.samp data to new .env fail
