@@ -23,20 +23,4 @@ module.exports = {
       return res.status(400).send({ error: e.message });
     }
   },
-
-  findOneById: async (req, res) => {},
 };
-
-// exports.getSymptomsList = async (req, res) => {
-//   try {
-//     const result = await getAll();
-//     return res.json({
-//       success: 1,
-//       data: result,
-//     });
-//   } catch (e) {
-//     return res.status(400).send({ error: e.message });
-//   }
-// };
-
-// module.exports = getSymptomsList;

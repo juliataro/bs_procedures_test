@@ -3,9 +3,12 @@ const symptomControllers = require("../controllers/symptomControllers");
 const router = express.Router();
 
 // @route GET && POST /symptoms/
-router.get("/", symptomControllers.getSymptomsList);
+router.route("/").get(symptomControllers.getSymptomsList);
 
-router.get("/:id", symptomControllers.findOneById);
+// router
+//   .route("/:id")
+//   .put(symptomControllers.updateSymptomById)
+//   .delete(symptomControllers.deleteSymptomById);
 
 // .delete(symptomControllers.deleteSymptom)
 //   .update(symptomControllers.updateSymptom)

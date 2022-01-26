@@ -1,10 +1,10 @@
 const mysql = require("mysql2");
 
 const pool = mysql.createConnection({
-  user: process.env.DB_USER,
   host: process.env.DB_HOST,
-  password: process.env.DB_PASS,
+  user: process.env.DB_USER,
   database: process.env.DB_NAME,
+  password: process.env.DB_PASS,
 });
 
 // let sql = "SELECT * FROM symptoms;";

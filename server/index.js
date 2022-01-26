@@ -1,14 +1,18 @@
 require("dotenv").config();
-const bodyParser = require("body-parser"); // allows environment variables to be set on process.env should be at top
 
 const express = require("express");
+const cors = require("cors");
 const app = express();
+const bodyParser = require("body-parser");
+// allows environment variables to be set on process.env should be at top: ;
 
 // import Axios from "axios";
-const cors = require("cors");
 
+var corsOptions = {
+  origin: "http://localhost:3008",
+};
 // Allowing to make calls from frontend to backend api
-app.use(cors());
+app.use(cors(corsOptions));
 
 // Middleware parse json bodies in the request object
 app.use(express.json());
