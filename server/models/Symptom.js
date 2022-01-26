@@ -1,29 +1,39 @@
-const pool = require("../config/db");
+const db = require("../config/db");
 
-const Symptom = function (symptom) {
-  this.title_et = symptom.title_et;
-  this.title_ru = symptom.title_ru;
-  this.title_en = symptom.title_en;
-};
-
-Symptom.getAll = (title_et, result) => {
-  console.log(getAll);
-  let query = "SELECT * FROM symptoms";
-
-  if (title_et) {
-    query += ` WHERE title LIKE '%${title_et}%'`;
+class Symptom {
+  constructor(title_et, title_ru, title_en) {
+    this.title_et = title_et;
+    this.title_ru = title_ru;
+    this.title_en = title_en;
   }
 
-  pool.query(query, (err, res) => {
-    if (err) {
-      console.log("error: ", err);
-      result(null, err);
-      return;
-    }
+  async save() {
+    let sql = `
+    INSERT INTO symptoms(
+      title_et,
+      title_ru,
+      title_en
+    )
+    VALUES(
+      '${this.title_et}',
+      '${this.title_ru}',
+      '${this.title_en}'
+    )
+    `;
 
-    console.log("symptoms: ", res);
-    result(null, res);
-  });
-};
+    const [newSymptom, _] = await db.execute(sql);
+    return newSymptom;
+  }
+
+  static findAll() {
+    let sql = "SELECT * FROM symptoms;";
+    return db.execute(sql);
+  }
+
+  static findById(id) {
+    let sql = `SELECT * FROM symptoms WHERE id = ${id};`;
+    return db.execute(sql);
+  }
+}
 
 module.exports = Symptom;

@@ -1,26 +1,42 @@
-const symptomModel = require("../models/Symptom");
+const Symptom = require("../models/Symptom");
 
-// exports.getSymptomsList = function (req, res, next) {
-//   //console.log('here all employees list');
+//  Saving  NEW Symptom
+exports.postNewSymptom = async (req, res, next) => {
+  try {
+    let { title_et, title_ru, title_en } = req.body;
+    let symptom = new Symptom(title_et, title_ru, title_en);
 
-//   symptomModel.getAll((err, symptoms) => {
-//     console.log("Controller");
-//     if (err) res.send(err);
-//     console.log("Result", symptoms);
-//     res.send(symptomControllers);
-//   });
-// };
+    symptom = await symptom.save();
 
-module.exports = {
-  getSymptomsList: async (req, res) => {
-    try {
-      const result = await getAll();
-      return res.json({
-        success: 1,
-        data: result,
-      });
-    } catch (e) {
-      return res.status(400).send({ error: e.message });
-    }
-  },
+    console.log(symptom);
+
+    res.send("Create new post");
+  } catch (error) {}
+};
+
+// Get Allposts from DB
+
+exports.getAllSymptoms = async (req, res, next) => {
+  try {
+    const symptoms = await Symptom.findAll();
+    res.status(200).json({ symptoms });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
+};
+
+// Get Symptom by Id
+
+exports.getSymptomById = async (req, res, next) => {
+  try {
+    //let symptom = await Symptom.findById(2);
+    let id = req.params.id;
+    let [symptom, _] = await Symptom.findById(id);
+
+    res.status(200).json({ symptom });
+  } catch (error) {
+    console.log(error);
+    next(error);
+  }
 };
