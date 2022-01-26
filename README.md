@@ -5,16 +5,7 @@ This is the frontend-backend project with Express.js React.js and MySQL
 To start Server
 
 1. create .env 
-2. copy this .env sample
-
-
-NODE_ENV=development
-PORT=
-
-DB_HOST=
-DB_USER=
-DB_NAME=
-DB_PASS=
+2. copy .env.samp data to new .env fail
 
 3. Edit your MySQL parameters
 ! Working with WorkBench = the DB_PASS is your Workbench password.
