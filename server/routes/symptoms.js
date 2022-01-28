@@ -10,9 +10,9 @@ router
 
 router.route("/:id").get(sControllers.getSymptomById);
 
-// router
-//   .route("/:id")
-//   .put(symptomControllers.updateSymptomById)
-//   .delete(symptomControllers.deleteSymptomById);
+router
+  .route("/:id")
+  .put(sControllers.updateSymptomById)
+  .delete(sControllers.deleteSymptomById);
 
 module.exports = router;
