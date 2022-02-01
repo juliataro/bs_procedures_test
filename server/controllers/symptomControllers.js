@@ -1,16 +1,16 @@
-const Symptom = require("../models/Symptom");
+const Symptom = require("../models/symptomModel");
 
 //  Saving  NEW Symptom
 exports.postNewSymptom = async (req, res, next) => {
   try {
-    let { title_et, title_ru, title_en } = req.body;
+    let { symp_title_et, symp_title_ru, symp_title_en } = req.body;
 
-    let symptom = new Symptom(title_et, title_ru, title_en);
+    let symptom = new Symptom(symp_title_et, symp_title_ru, symp_title_en);
 
     symptom = await symptom.saveNewSymptom();
 
     console.log(symptom);
-    res.send("Created new symptom");
+    res.send("Created New Symptom!");
   } catch (error) {}
 };
 
@@ -44,18 +44,7 @@ exports.getSymptomById = async (req, res, next) => {
 };
 
 // Update Symptom By Id
-exports.updateSymptomById = async (req, res, next) => {
-  let { title_et, title_ru, title_en } = req.body;
-
-  try {
-    let [symptom, _] = await Symptom.updateById(req.params.id, req.params);
-    // res.status(200).json({ symptom });
-    res.json({ message: "updated" });
-  } catch (error) {
-    console.log(error);
-    next(error);
-  }
-};
+exports.updateSymptomById = async (req, res, next) => {};
 
 // Delete the Symptom By Id
 exports.deleteSymptomById = async (req, res, next) => {

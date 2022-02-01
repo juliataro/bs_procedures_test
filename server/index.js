@@ -21,9 +21,10 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 // Redirect requests to endpoint starting with /procedures to getProsedures.js
-
-app.use("/symptoms", require("./routes/symptoms"));
-// app.use("/contraindications", require("./routes/contraindications"));
+app.use("/procedures", require("./routes/procedureRoutes"));
+app.use("/symptoms", require("./routes/symptomRoutes"));
+app.use("/targets", require("./routes/targetRoutes"));
+app.use("/contraindications", require("./routes/contrainRoutes"));
 
 app.use((err, req, res, next) => {
   console.log(err.stack);
