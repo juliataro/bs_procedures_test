@@ -3,14 +3,30 @@ const express = require("express");
 const pControllers = require("../controllers/procedureControllers");
 const router = express.Router();
 
-// @route GET && POST /contraindication/
-router
-  .route("/")
-  .get(pControllers.getAllProcedures)
-  .post(pControllers.postNewProcedure);
+// @ routes GET /procedures/ For Users
 
+// router
+//   .route("/")
+//   .get(pControllers.getProceduresTargets)
+//   .get(pControllers.getProceduresSymptoms)
+//   .get(pControllers.getProceduresDiseases)
+//   .get(pControllers.getProceduresTargetsSymptoms)
+//   .get(pControllers.getProceduresTargetsDiseases)
+//   .get(pControllers.getProceduresSymptomsDiseases)
+//   .get(pControllers.getProceduresTargetsSymptomsDiseases);
+
+/**
+ * Routses GET && POST && PUT && DELETE /procedures/ for Admin-panel
+ */
+router.route("/").get(pControllers.getAllProcedures);
+
+//http://localhost:4000/procedures/newprocedure/
+router.route("/newprocedure").post(pControllers.postNewProcedure);
+
+// GET procedure by Id
 router.route("/:id").get(pControllers.getProcedureById);
 
+// PUT & DELETE router by Id
 router
   .route("/:id")
   .put(pControllers.updateProcedureById)
