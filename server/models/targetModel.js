@@ -26,7 +26,8 @@ class Target {
   }
 
   static findByIdAndUpdate(id) {
-    let sql = `UPDATE targets SET title_et = ${this.tar_title_et}, title_ru = ${this.tar_title_ru}, title_en = ${this.tar_title_en} WHERE id = ${id} ;`;
+    let sql = `UPDATE targets SET tar_title_et = ?, tar_title_ru = ?, tar_title_en = ? WHERE id = ${id} ;`;
+
     return db.execute(sql);
   }
 

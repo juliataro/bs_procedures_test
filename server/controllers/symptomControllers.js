@@ -14,7 +14,7 @@ exports.postNewSymptom = async (req, res, next) => {
   } catch (error) {}
 };
 
-// Get Allposts from DB
+// Get All Symptoms from DB
 
 exports.getAllSymptoms = async (req, res, next) => {
   try {

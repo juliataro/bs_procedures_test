@@ -42,7 +42,20 @@ exports.getTargetById = async (req, res, next) => {
 };
 
 // Update Symptom By Id
-exports.updateTargetById = async (req, res, next) => {};
+exports.updateTargetById = async (req, res, next) => {
+  // try {
+  //   let targetUpdate = await Target.findById(req.params.id);
+  //   targetUpdate = await Target.findByIdAndUpdate(req.params.id, req.body, {
+  //     new: true,
+  //     runValidators: true,
+  //   });
+  //   res.status(200);
+  //   res.send("Target has been successfully updated");
+  // } catch (error) {
+  //   console.log(error);
+  //   next(error);
+  // }
+};
 
 // Delete the Symptom By Id
 exports.deleteTargetById = async (req, res, next) => {
